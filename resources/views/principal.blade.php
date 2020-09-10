@@ -2,7 +2,7 @@
 <html>
 <!-- CSS only -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 <!-- Google Fonts -->
@@ -24,55 +24,87 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<link rel="icon" type="image/png" href="/icono.png" />
 	<title> Principal </title>
 </head>
-<!--Navbar -->
-<nav class="mb-1 navbar navbar-expand-lg navbar-dark mdb-color pt-4">
-  <a class="navbar-brand" href="#">DENGUE</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
-    aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Inicio
-          <span class="sr-only">(current)</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Mapas</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Estadisticas</a>
-      </li>
-    </ul>
-    <ul class="navbar-nav ml-auto nav-flex-icons">
-      <li class="nav-item avatar">
-        <a class="nav-link p-0" href="#">
-          <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="rounded-circle z-depth-0"
-            alt="avatar image" height="35">
-        </a>
-      </li>
-    </ul>
-  </div>
+<body class="fixed-sn mdb-skin">
+
+  <!--Double navigation-->
+  <header>
+    <!-- Sidebar navigation -->
+    <div id="slide-out" class="side-nav fixed wide sn-bg-1">
+      <ul class="custom-scrollbar">
+        <!-- Logo -->
+        
+      </ul>
+      <div class="sidenav-bg rgba-blue-strong"></div>
+    </div>
+    <!--/. Sidebar navigation -->
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav">
+      <!-- SideNav slide-out button -->
+      <div class="float-left">
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="fas fa-bars"></i></a>
+      </div>
+      <!-- Breadcrumb-->
+      <div class="breadcrumb-dn mr-auto">
+        
+      </div>
+      <ul class="nav navbar-nav nav-flex-icons ml-auto">
+        <li class="nav-item">
+          <a class="nav-link"><i class="fas fa-envelope"></i> <span class="clearfix d-none d-sm-inline-block">Contactar</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><i class="fas fa-comments"></i> <span class="clearfix d-none d-sm-inline-block">Denuncias</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><i class="fas fa-user"></i> <span class="clearfix d-none d-sm-inline-block">Iniciar Secion</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><i class="fas fa-map-marked-alt"></i> <span class="clearfix d-none d-sm-inline-block">Mapas</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><i class="fa fa-chart-pie"></i> <span class="clearfix d-none d-sm-inline-block">Graficos</span></a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.Navbar -->
+  </header>
+</body>
 </nav>
+
 <!--/.Navbar -->
+<div class="container my-5 py-5 z-depth-1">
+  <!--Section: Content-->
+  <section class="dark-grey-text text-center">
+    
+    <h3 class="font-weight-bold pt-5 pb-2">Bienvenido a la pataforma web de noticas de los casos de dengue, esta es una version beta, proximante estaran disponibles mas noticias, graficos, mapas de los casos por barrios, la informacion es estatica, estan como prueba de como se vizualizaria.</h3>
 
+    <div class="row mx-3">
+      <div class="col-md-4 px-4 mb-4">
 
-<!-- Card -->
-<div class="card card-cascade wider reverse">
+        <div class="view">
+          <img src="https://mdbootstrap.com/img/illustrations/drawkit-drawing-man-colour.svg" class="img-fluid" alt="smaple image">
+        </div>
 
-  <!-- Card image -->
-  <div class="container">
-  <div class="view view-cascade overlay">
-    <img class="card-img-top" src="https://www.lavanguardia.com/r/GODO/LV/p3/WebSite/2016/01/27/Recortada/Zika_Virus_US_Warning-0f203_20160122193516-kioB-U301709971757GZD-992x558@LaVanguardia-Web.jpg" height="500px" width="500px"
-      alt="Card image cap">
-    <a href="#!">
-      <div class="mask rgba-white-slight"></div>
-    </a>
+      </div>
+     <div class="col-md-4 px-4 mb-4">
+
+        <div class="view">
+          <img src="https://mdbootstrap.com/img/illustrations/drawkit-phone-conversation-colour.svg" class="img-fluid" alt="smaple image">
+        </div>
+
+      </div>
+      <div class="col-md-4 px-4 mb-4">
+
+        <div class="view">
+          <img src="https://mdbootstrap.com/img/illustrations/app-user-colour.svg" class="img-fluid" alt="smaple image">
+        </div>
+
+      </div>
+    </div>
+    <!--Section: Content-->
   </div>
- </div>
   <!-- Card content -->
   <div class="card-body card-body-cascade text-center">
 
@@ -84,7 +116,7 @@
 
 </div>
 <!-- Card -->
-
+<div class="container">
 <!-- Card deck -->
 <div class="card-deck">
 
@@ -93,7 +125,7 @@
 
     <!--Card image-->
     <div class="view overlay">
-      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+      <img class="card-img-top" src="https://media.ultimahora.com/adjuntos/161/imagenes/009/301/0009301947.jpg"
         alt="Card image cap">
       <a href="#!">
         <div class="mask rgba-white-slight"></div>
@@ -104,12 +136,11 @@
     <div class="card-body">
 
       <!--Title-->
-      <h4 class="card-title">Card title</h4>
+      <h4 class="card-title">Paraguay, uno de los países con más casos de dengue en la región</h4>
       <!--Text-->
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
+      <p class="card-text">Según cifras de la Organización Panamericana de la Salud (OPS), el Paraguay es el segundo país con mayor cantidad de casos de dengue en la región, durante los primeros meses del 2020, después de Brasil..</p>
       <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-      <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+      <button type="button" class="btn btn-light-blue btn-md">Leer mas</button>
 
     </div>
 
@@ -121,7 +152,7 @@
 
     <!--Card image-->
     <div class="view overlay">
-      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg"
+      <img class="card-img-top" src="https://media.ultimahora.com/adjuntos/161/imagenes/009/512/0009512878.jpg"
         alt="Card image cap">
       <a href="#!">
         <div class="mask rgba-white-slight"></div>
@@ -132,12 +163,11 @@
     <div class="card-body">
 
       <!--Title-->
-      <h4 class="card-title">Card title</h4>
+      <h4 class="card-title">Identifican un microbio que bloquea al parásito de la malaria en mosquitos</h4>
       <!--Text-->
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
+      <p class="card-text">El mosquito anofeles es el responsable de la transmisión de la malaria, pero algunos tienen un microbio que bloquea al parásito que causa la enfermedad, según un estudio que publica Nature Communications.</p>
       <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-      <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+      <button type="button" class="btn btn-light-blue btn-md">Leer mas</button>
 
     </div>
 
@@ -149,7 +179,7 @@
 
     <!--Card image-->
     <div class="view overlay">
-      <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg"
+      <img class="card-img-top" src="https://media.ultimahora.com/adjuntos/161/imagenes/009/336/0009336638.jpg"
         alt="Card image cap">
       <a href="#!">
         <div class="mask rgba-white-slight"></div>
@@ -160,12 +190,11 @@
     <div class="card-body">
 
       <!--Title-->
-      <h4 class="card-title">Card title</h4>
+      <h4 class="card-title">"El dengue disminuyó, pero no desapareció", alerta titular del IPS</h4>
       <!--Text-->
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
+      <p class="card-text">El presidente del Instituto de Previsión Social (IPS), Andrés Gubetich, dijo que todavía hay casos de dengue que se registran en el sistema de salud. Instó a la ciudadanía a seguir haciendo la limpieza en todo el territorio nacional..</p>
       <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-      <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+      <button type="button" class="btn btn-light-blue btn-md">Leer mas</button>
 
     </div>
 
@@ -173,6 +202,141 @@
   <!-- Card -->
 
 </div>
+  <div class="container my-5 py-5 z-depth-1">
+
+ 
+    <!--Section: Content-->
+    <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+
+      <!--Grid row-->
+      <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4 mb-md-0">
+
+          <!--Image-->
+          <div class="view overlay z-depth-1-half">
+            <img src="https://mdbootstrap.com/img/Photos/Others/img%20(16).jpg" class="img-fluid" alt="">
+            <a href="#">
+              <div class="mask rgba-white-light"></div>
+            </a>
+          </div>
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-6 mb-4 mb-md-0">
+
+          <h3 class="font-weight-bold">Material Design Blocks</h3>
+
+          <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente
+            molestiae
+            numquam quas, voluptates omnis nulla ea odio quia similique corrupti magnam, doloremque laborum.</p>
+
+          <a class="btn btn-brown btn-md ml-0" href="#" role="button">Travel<i class="fa fa-plane ml-2"></i></a>
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+
+    </section>
+    <!--Section: Content-->
+
+
+  </div>
+    <div class="container my-5 py-5 z-depth-1">
+
+ 
+    <!--Section: Content-->
+    <section class="px-md-5 mx-md-5 dark-grey-text text-center text-lg-left">
+
+      <!--Grid row-->
+      <div class="row">
+
+        <!--Grid column-->
+        <div class="col-lg-6 mb-4 mb-lg-0 d-flex align-items-center justify-content-center">
+
+          <img src="https://mdbootstrap.com/img/Others/food.jpg" class="img-fluid" alt="">
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-6 mb-4 mb-lg-0">
+
+          <h3 class="font-weight-bold">Call to action</h3>
+
+          <p class="font-weight-bold">That's a very nice subheading</p>
+
+          <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente
+            molestiae
+            numquam quas, voluptates omnis nulla ea odio quia similique corrupti magnam, doloremque laborum.</p>
+
+          <a class="font-weight-bold" href="#" >Learn more<i class="fas fa-angle-right ml-2"></i></a>
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+
+    </section>
+    <!--Section: Content-->
+
+
+  </div>
+    <div class="container my-5 py-5 z-depth-1">
+ 
+ 
+        <!--Section: Content-->
+        <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
+    
+          <!--Grid row-->
+          <div class="row">
+    
+            <!--Grid column-->
+            <div class="col-md-6 mb-4 mb-md-0">
+    
+              <h3 class="font-weight-bold">Material Design Blocks</h3>
+    
+              <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente
+                molestiae
+                numquam quas, voluptates omnis nulla ea odio quia similique corrupti magnam, doloremque laborum.</p>
+    
+              <a class="btn btn-purple btn-md ml-0" href="#" role="button">Start now<i class="fa fa-gem ml-2"></i></a>
+    
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-md-6 mb-4 mb-md-0">
+    
+              <!--Image-->
+              <div class="view overlay z-depth-1-half">
+                <img src="https://mdbootstrap.com/img/Photos/Others/img%20(29).jpg" class="img-fluid"
+                  alt="">
+                <a href="#">
+                  <div class="mask rgba-white-light"></div>
+                </a>
+              </div>
+    
+            </div>
+            <!--Grid column-->
+    
+          </div>
+          <!--Grid row-->
+    
+    
+        </section>
+        <!--Section: Content-->
+    
+    
+      </div>
 <!-- Card deck -->
 <center>
 <h4 class="card-title"><strong> ULTIMAS NOTICIAS
@@ -218,7 +382,7 @@
   </ol>
 </div>
 <!--/.Carousel Wrapper-->
-
+</div>
 <body>
 
 </body>
