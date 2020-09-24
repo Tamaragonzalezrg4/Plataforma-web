@@ -21,6 +21,7 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->middleware('verified');
 Route::get('principal', 'PrincipalController@noticias')->middleware('auth');
+Route::get('graficos', 'GraficoController@index')->middleware('auth');
 
 Route::resource('users', 'UserController');
 

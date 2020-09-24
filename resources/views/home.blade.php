@@ -94,7 +94,7 @@
               <div class="icon">
                <i class="fa fa-clipboard"></i>
               </div>
-              <a href="" class="small-box-footer">Mas informacion <i class="fa fa-arrow-circle-right"></i></a>
+              <a href="{{ action('GraficoController@index') }}" class="small-box-footer">Mas informacion <i class="fa fa-arrow-circle-right"></i></a>
             </div>
           </div>
 </div>
