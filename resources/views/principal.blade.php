@@ -73,72 +73,11 @@
 </body>
 </nav>
 
-<!--Carousel Wrapper-->
-<div id="video-carousel-example" class="carousel slide carousel-fade" data-ride="carousel">
-  <!--Indicators-->
-  <ol class="carousel-indicators">
-    <li data-target="#video-carousel-example" data-slide-to="0" class="active"></li>
-    <li data-target="#video-carousel-example" data-slide-to="1"></li>
-    <li data-target="#video-carousel-example" data-slide-to="2"></li>
-  </ol>
-  <!--/.Indicators-->
-  <!--Slides-->
-  <div class="carousel-inner" role="listbox">
-    <div class="carousel-item active">
-      <video class="video-fluid" autoplay loop muted>
-        <source src="https://mdbootstrap.com/img/video/Tropical.mp4" type="video/mp4" />
-      </video>
-      <!--Caption-->
-      <div class="carousel-caption">
-        <div class="animated fadeInDown">
-          <h1 class="h1-responsive">Bienvenido</h1>
-          <p>Primeras noticias</p>
-        </div>
-      </div>
-      <!--Caption-->
-    </div>
-    <div class="carousel-item">
-      <video class="video-fluid" autoplay loop muted>
-        <source src="https://mdbootstrap.com/img/video/forest.mp4" type="video/mp4" />
-      </video>
-      <!--Caption-->
-      <div class="carousel-caption">
-        <div class="animated fadeInDown">
-          <h3 class="h3-responsive">Bienvenido</h3>
-          <p>Primeras noticias</p>
-        </div>
-      </div>
-      <!--Caption-->
-    </div>
-    <div class="carousel-item">
-      <video class="video-fluid" autoplay loop muted>
-        <source src="https://mdbootstrap.com/img/video/Agua-natural.mp4" type="video/mp4" />
-      </video>
-      <!--Caption-->
-      <div class="carousel-caption">
-        <div class="animated fadeInDown">
-          <h3 class="h3-responsive">Bienvenido</h3>
-          <p>Primeras noticias</p>
-        </div>
-      </div>
-      <!--Caption-->
-    </div>
-  </div>
-  <!--/.Slides-->
-  <!--Controls-->
-  <a class="carousel-control-prev" href="#video-carousel-example" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#video-carousel-example" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  <!--/.Controls-->
-</div>
+
 <!--Carousel Wrapper-->
 
     <!--/.Navbar -->
+    <br>
 <div class="container my-5 py-5 z-depth-1">
   <!--Section: Content-->
   <section class="dark-grey-text text-center">
@@ -170,11 +109,12 @@
     </div>
     <!--Section: Content-->
   </div>
+</br>
   <!-- Card content -->
   <div class="card-body card-body-cascade text-center">
 
     <!-- Title -->
-    <h4 class="card-title"><strong>NOTICIAS DEL DENGUE</strong></h4>
+    <h4 class="card-title"><strong>ULTIMAS NOTICIAS</strong></h4>
     <!-- Subtitle -->
   
   </div>
@@ -267,94 +207,7 @@
   <!-- Card -->
 
 </div>
-  <div class="container my-5 py-5 z-depth-1">
-
- 
-    <!--Section: Content-->
-    <section class="px-md-5 mx-md-5 text-center text-lg-left dark-grey-text">
-
-      <!--Grid row-->
-      <div class="row">
-
-        <!--Grid column-->
-        <div class="col-md-6 mb-4 mb-md-0">
-
-          <!--Image-->
-          <div class="view overlay z-depth-1-half">
-            <img src="https://mdbootstrap.com/img/Photos/Others/img%20(16).jpg" class="img-fluid" alt="">
-            <a href="#">
-              <div class="mask rgba-white-light"></div>
-            </a>
-          </div>
-
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-md-6 mb-4 mb-md-0">
-
-          <h3 class="font-weight-bold">Material Design Blocks</h3>
-
-          <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente
-            molestiae
-            numquam quas, voluptates omnis nulla ea odio quia similique corrupti magnam, doloremque laborum.</p>
-
-          <a class="btn btn-brown btn-md ml-0" href="#" role="button">Travel<i class="fa fa-plane ml-2"></i></a>
-
-        </div>
-        <!--Grid column-->
-
-      </div>
-      <!--Grid row-->
-
-
-    </section>
-    <!--Section: Content-->
-
-
-  </div>
-    <div class="container my-5 py-5 z-depth-1">
-
- 
-    <!--Section: Content-->
-    <section class="px-md-5 mx-md-5 dark-grey-text text-center text-lg-left">
-
-      <!--Grid row-->
-      <div class="row">
-
-        <!--Grid column-->
-        <div class="col-lg-6 mb-4 mb-lg-0 d-flex align-items-center justify-content-center">
-
-          <img src="https://mdbootstrap.com/img/Others/food.jpg" class="img-fluid" alt="">
-
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-6 mb-4 mb-lg-0">
-
-          <h3 class="font-weight-bold">Call to action</h3>
-
-          <p class="font-weight-bold">That's a very nice subheading</p>
-
-          <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente
-            molestiae
-            numquam quas, voluptates omnis nulla ea odio quia similique corrupti magnam, doloremque laborum.</p>
-
-          <a class="font-weight-bold" href="#" >Learn more<i class="fas fa-angle-right ml-2"></i></a>
-
-        </div>
-        <!--Grid column-->
-
-      </div>
-      <!--Grid row-->
-
-
-    </section>
-    <!--Section: Content-->
-
-
-  </div>
+@foreach($noticias as $noticia)
     <div class="container my-5 py-5 z-depth-1">
  
  
@@ -367,13 +220,11 @@
             <!--Grid column-->
             <div class="col-md-6 mb-4 mb-md-0">
     
-              <h3 class="font-weight-bold">Material Design Blocks</h3>
+              <h3 class="font-weight-bold">Titulo: {{$noticia->titulo}}</h3>
     
-              <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente
-                molestiae
-                numquam quas, voluptates omnis nulla ea odio quia similique corrupti magnam, doloremque laborum.</p>
+              <p class="text-muted">Descripcion: {{$noticia->descripcion}}</p>
     
-              <a class="btn btn-purple btn-md ml-0" href="#" role="button">Start now<i class="fa fa-gem ml-2"></i></a>
+              <a class="btn btn-purple btn-md ml-0" href="#" role="button">URL: {{$noticia->enlace_fuente}}<i class="fa fa-gem ml-2"></i></a>
     
             </div>
             <!--Grid column-->
@@ -383,8 +234,7 @@
     
               <!--Image-->
               <div class="view overlay z-depth-1-half">
-                <img src="https://mdbootstrap.com/img/Photos/Others/img%20(29).jpg" class="img-fluid"
-                  alt="">
+                <img  src="{{$noticia->imagen}}"  style="width:500px " class="img-responsive" alt="">
                 <a href="#">
                   <div class="mask rgba-white-light"></div>
                 </a>
@@ -402,9 +252,14 @@
     
     
       </div>
+      @endforeach
+       <div class="container">
+      {!! $noticias->render() !!}
+      </div>
 <!-- Card deck -->
+
 <center>
-<h4 class="card-title"><strong> ULTIMAS NOTICIAS
+<h4 class="card-title"><strong> proximamente
 </strong></h4></center>
 <!--Carousel Wrapper-->
 <div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">

@@ -20,7 +20,9 @@ Route::get('/', function () {
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->middleware('verified');
-
+Route::get('principal', 'PrincipalController@noticias')->middleware('auth');
 
 Route::resource('users', 'UserController');
-Route::get('principal', 'HomeController@usuario')->middleware('auth');
+
+
+Route::resource('noticias', 'NoticiaController');

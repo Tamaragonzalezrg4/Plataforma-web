@@ -79,7 +79,7 @@
               <div class="icon">
                 <i class="fa fa-address-card"></i>
               </div>
-              <a href="{{ action('HomeController@usuario') }}" class="small-box-footer">Mas informacion <i class="fa fa-arrow-circle-right"></i></a>
+              <a href="{{ action('PrincipalController@noticias') }}" class="small-box-footer">Mas informacion <i class="fa fa-arrow-circle-right"></i></a>
             </div>
           </div>
                     <!-- ./col -->
