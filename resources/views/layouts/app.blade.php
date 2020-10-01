@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Panel|Administracion </title>
+    <title>ADMINISTRACION VIIRS </title>
     <link rel="icon" type="image/png" href="/icono.png" />
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
@@ -38,7 +38,7 @@
 
             <!-- Logo -->
             <a href="{{ url('/home') }}" class="logo">
-                <b>PA | Administracion</b>
+                <b>ADMINISTRACION</b>
             </a>
 
             <!-- Header Navbar -->

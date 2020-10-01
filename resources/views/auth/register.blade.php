@@ -24,27 +24,60 @@
     <!-- iCheck -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/skins/square/_all.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        body:before{
+            content: '';
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Encarnaci%C3%B3n%2C_Paraguay.jpg/500px-Encarnaci%C3%B3n%2C_Paraguay.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            -webkit-filter: blur(10px);
+            -moz-filter: blur(10px);
+            -o-filter: blur(10px);
+            -ms-filter: blur(10px);
+            filter: blur(10px);
+        }
+        .register-box
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 400px;
+            height: 500px;
+            padding: 40px 20px;
+            box-sizing: border-box;
+            background: rgba(0,0,0,.5);
+        }
+        .register-box b {
+            color: #000000;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    </style>
 </head>
 <body class="hold-transition register-page">
 <div class="register-box">
     <div class="register-logo">
-        <a href="{{ url('/home') }}"><b>Pa|</b>Administracion</a>
+        <a href="{{ url('/home') }}"><b>ADMINISTRACION</b></a>
     </div>
 
     <div class="register-box-body">
-        <p class="login-box-msg">Registrar nuevo usuario</p>
+        <p class="login-box-msg">REGISTRAR NUEVO USUARIO</p>
 
         <form method="post" action="{{ url('/register') }}">
             @csrf
 
             <div class="form-group has-feedback{{ $errors->has('name') ? ' has-error' : '' }}">
-                <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Full Name">
+                <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Nombre Completo">
                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
 
                 @if ($errors->has('name'))
@@ -55,7 +88,7 @@
             </div>
 
             <div class="form-group has-feedback{{ $errors->has('email') ? ' has-error' : '' }}">
-                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email">
+                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Correo">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
 
                 @if ($errors->has('email'))
@@ -66,7 +99,7 @@
             </div>
 
             <div class="form-group has-feedback{{ $errors->has('password') ? ' has-error' : '' }}">
-                <input type="password" class="form-control" name="password" placeholder="Password">
+                <input type="password" class="form-control" name="password" placeholder="Contraseña">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
 
                 @if ($errors->has('password'))
@@ -77,7 +110,7 @@
             </div>
 
             <div class="form-group has-feedback{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                <input type="password" name="password_confirmation" class="form-control" placeholder="Confirm password">
+                <input type="password" name="password_confirmation" class="form-control" placeholder=" Confirmar Contraseña">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
 
                 @if ($errors->has('password_confirmation'))
@@ -97,7 +130,7 @@
                 </div>
                 <!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Registrar</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">GUARDAR</button>
                 </div>
                 <!-- /.col -->
             </div>

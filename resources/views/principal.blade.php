@@ -55,16 +55,16 @@
           <a class="nav-link"><i class="fas fa-envelope"></i> <span class="clearfix d-none d-sm-inline-block">Contactar</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"><i class="fas fa-comments"></i> <span class="clearfix d-none d-sm-inline-block">Denuncias</span></a>
+          <a class="nav-link"href="{{ action('PrincipalController@noticias') }}"><i class="fa fa-home"></i> <span class="clearfix d-none d-sm-inline-block">Inicio</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link"><i class="fas fa-user"></i> <span class="clearfix d-none d-sm-inline-block">Iniciar Secion</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"><i class="fas fa-map-marked-alt"></i> <span class="clearfix d-none d-sm-inline-block">Mapas</span></a>
+          <a class="nav-link" href="{{ action('MapaController@index') }}"><i class="fas fa-map-marked-alt"></i> <span class="clearfix d-none d-sm-inline-block">Mapas</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"><i class="fa fa-chart-pie"></i> <span class="clearfix d-none d-sm-inline-block">Graficos</span></a>
+          <a class="nav-link" href="{{ action('GraficoController@index') }}"><i class="fa fa-chart-pie"></i> <span class="clearfix d-none d-sm-inline-block">Graficos</span></a>
         </li>
       </ul>
     </nav>
@@ -114,7 +114,7 @@
   <div class="card-body card-body-cascade text-center">
 
     <!-- Title -->
-    <h4 class="card-title"><strong>ULTIMAS NOTICIAS</strong></h4>
+    
     <!-- Subtitle -->
   
   </div>
@@ -122,16 +122,23 @@
 </div>
 <!-- Card -->
 <div class="container">
+  <center>
+<h4 class="card-title"><strong> ULTIMAS NOTICIAS
+</strong></h4></center>
+
+@foreach($ultimas->chunk(3) as $ultimas)
 <!-- Card deck -->
 <div class="card-deck">
+  
+@foreach($ultimas as $n)
+
 
   <!-- Card -->
   <div class="card mb-4">
 
     <!--Card image-->
     <div class="view overlay">
-      <img class="card-img-top" src="https://media.ultimahora.com/adjuntos/161/imagenes/009/301/0009301947.jpg"
-        alt="Card image cap">
+       <img  src="{{$n->imagen}}"  style="width:400px" class="img-responsive" alt="" >
       <a href="#!">
         <div class="mask rgba-white-slight"></div>
       </a>
@@ -141,72 +148,20 @@
     <div class="card-body">
 
       <!--Title-->
-      <h4 class="card-title">Paraguay, uno de los países con más casos de dengue en la región</h4>
+      <h4 class="card-title">Titulo: {{$n->titulo}}</h4>
       <!--Text-->
-      <p class="card-text">Según cifras de la Organización Panamericana de la Salud (OPS), el Paraguay es el segundo país con mayor cantidad de casos de dengue en la región, durante los primeros meses del 2020, después de Brasil..</p>
+      <p class="card-text">Descripcion: {{$n->descripcion}}.</p>
+      <p class="card-text">Fuente: {{$n->enlace_fuente}}.</p>
       <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-      <button type="button" class="btn btn-light-blue btn-md">Leer mas</button>
+      <button type="button" class="btn btn-light-blue btn-md">{{$n->created_at}}</button>
 
     </div>
 
   </div>
+  @endforeach
   <!-- Card -->
-
-  <!-- Card -->
-  <div class="card mb-4">
-
-    <!--Card image-->
-    <div class="view overlay">
-      <img class="card-img-top" src="https://media.ultimahora.com/adjuntos/161/imagenes/009/512/0009512878.jpg"
-        alt="Card image cap">
-      <a href="#!">
-        <div class="mask rgba-white-slight"></div>
-      </a>
-    </div>
-
-    <!--Card content-->
-    <div class="card-body">
-
-      <!--Title-->
-      <h4 class="card-title">Identifican un microbio que bloquea al parásito de la malaria en mosquitos</h4>
-      <!--Text-->
-      <p class="card-text">El mosquito anofeles es el responsable de la transmisión de la malaria, pero algunos tienen un microbio que bloquea al parásito que causa la enfermedad, según un estudio que publica Nature Communications.</p>
-      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-      <button type="button" class="btn btn-light-blue btn-md">Leer mas</button>
-
-    </div>
-
-  </div>
-  <!-- Card -->
-
-  <!-- Card -->
-  <div class="card mb-4">
-
-    <!--Card image-->
-    <div class="view overlay">
-      <img class="card-img-top" src="https://media.ultimahora.com/adjuntos/161/imagenes/009/336/0009336638.jpg"
-        alt="Card image cap">
-      <a href="#!">
-        <div class="mask rgba-white-slight"></div>
-      </a>
-    </div>
-
-    <!--Card content-->
-    <div class="card-body">
-
-      <!--Title-->
-      <h4 class="card-title">"El dengue disminuyó, pero no desapareció", alerta titular del IPS</h4>
-      <!--Text-->
-      <p class="card-text">El presidente del Instituto de Previsión Social (IPS), Andrés Gubetich, dijo que todavía hay casos de dengue que se registran en el sistema de salud. Instó a la ciudadanía a seguir haciendo la limpieza en todo el territorio nacional..</p>
-      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-      <button type="button" class="btn btn-light-blue btn-md">Leer mas</button>
-
-    </div>
-
-  </div>
-  <!-- Card -->
-
 </div>
+@endforeach
 @foreach($noticias as $noticia)
     <div class="container my-5 py-5 z-depth-1">
  
@@ -306,6 +261,9 @@
 <body>
 
 </body>
+<div class="container"> 
+  
+
 <!-- Footer -->
 <footer class="page-footer font-small mdb-color pt-4">
 
@@ -368,15 +326,15 @@
 
       <!-- Grid column -->
       <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-        <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+        <h6 class="text-uppercase mb-4 font-weight-bold">Contacto</h6>
         <p>
-          <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+          <i class="fas fa-home mr-3"></i> Encarnacion</p>
         <p>
-          <i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+          <i class="fas fa-envelope mr-3"></i> 7masecretariageneral@gmail.com</p>
         <p>
-          <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+          <i class="fas fa-phone mr-3"></i> (071) 203 076</p>
         <p>
-          <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+          <i class="fas fa-phone mr-3"></i> (071) 202 620</p>
       </div>
       <!-- Grid column -->
 
@@ -417,4 +375,5 @@
 
 </footer>
 <!-- Footer -->
+</div>
 </html>

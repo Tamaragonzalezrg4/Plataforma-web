@@ -1,3 +1,4 @@
+
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>  
@@ -5,10 +6,25 @@
 <script src="https://code.highcharts.com/modules/offline-exporting.js"></script>  
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
+<br></br>
+<br>
+@include('layouts.menup')
+@yield('content')
 <div class="container">
- <div class="card">
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h2 class="display-4"> <center><i class="fa fa-chart-pie"></i> Historial de graficos </center></h2>
+    <p class="lead"><center>Aqui se observan los datos mas recientes en formato grafico.</center></p>
+  </div>
+</div>
+</div>
+
+<div class="container">
+
+ 
    <!-- Card content -->
    <div class="card-body">
+    <div class="card">
     <!-- Title -->
          
           <div id="container"></div>
@@ -23,7 +39,7 @@ Highcharts.chart('container', {
         type: 'pie'
     },
     title: {
-        text: 'Mas afectados'
+        text: 'Generos mas afectados'
     },
     tooltip: {
         pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -47,25 +63,20 @@ Highcharts.chart('container', {
         name: 'Brands',
         colorByPoint: true,
         data: [{
-            name: 'Encarnacion',
+            name: 'FEMENINO',
             y: 61.41,
             sliced: true,
             selected: true
         }, {
-            name: 'Cambyreta',
+            name: 'MASCULINO',
             y: 11.84
         }, {
-            name: 'Coronel Bogado',
+            name: 'AMBOS',
             y: 10.85
         }, {
-            name: 'Capitan Miranda',
+            name: 'OTRO',
             y: 4.67
-        }, {
-            name: 'Nueva Alborada',
-            y: 4.18
-        }, {
-            name: 'Otros',
-            y: 7.05
+        
         }]
     }]
 });         
@@ -74,11 +85,14 @@ Highcharts.chart('container', {
     </div>
 </div>
 
-      <div class="card-body">
+      
     <!-- Title -->
          <div class="container">
+            <div class="card-body">
+            <div class="card">
           <div id="containers">
  </div>
+          </div>
           </div>
           <script type="text/javascript">
           	Highcharts.chart('containers', {
@@ -86,7 +100,7 @@ Highcharts.chart('container', {
         type: 'column'
     },
     title: {
-        text: 'Monthly Average Rainfall'
+        text: 'Casos mensuales por distrito'
     },
     subtitle: {
         text: 'Source: WorldClimate.com'
@@ -129,19 +143,19 @@ Highcharts.chart('container', {
         }
     },
     series: [{
-        name: 'Tokyo',
+        name: 'Encarnacion',
         data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
 
     }, {
-        name: 'New York',
+        name: 'Capitan Miranda',
         data: [83.6, 78.8, 98.5, 93.4, 106.0, 84.5, 105.0, 104.3, 91.2, 83.5, 106.6, 92.3]
 
     }, {
-        name: 'London',
+        name: 'Coronel Bogado',
         data: [48.9, 38.8, 39.3, 41.4, 47.0, 48.3, 59.0, 59.6, 52.4, 65.2, 59.3, 51.2]
 
     }, {
-        name: 'Berlin',
+        name: 'Cambyreta',
         data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1]
 
     }]
@@ -149,4 +163,80 @@ Highcharts.chart('container', {
 
           </script></div>
           </div>
-         
+          
+    <!-- Title -->
+         <div class="container">
+            <div class="card-body">
+            <div class="card">
+          <div id="containerss">
+
+        </div>
+          </div>
+          </div>
+            <script type="text/javascript">
+                var chart = Highcharts.chart('containerss', {
+
+    title: {
+        text: 'Estado de casos mensual'
+    },
+
+    subtitle: {
+        text: 'Detalles'
+    },
+
+    xAxis: {
+        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    },
+
+    series: [{
+        type: 'column',
+        colorByPoint: true,
+        data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
+        showInLegend: false
+    }]
+
+});
+
+
+$('#plain').click(function () {
+    chart.update({
+        chart: {
+            inverted: false,
+            polar: false
+        },
+        subtitle: {
+            text: 'Plain'
+        }
+    });
+});
+
+$('#inverted').click(function () {
+    chart.update({
+        chart: {
+            inverted: true,
+            polar: false
+        },
+        subtitle: {
+            text: 'Inverted'
+        }
+    });
+});
+
+$('#polar').click(function () {
+    chart.update({
+        chart: {
+            inverted: false,
+            polar: true
+        },
+        subtitle: {
+            text: 'Polar'
+        }
+    });
+});
+            </script>
+              
+          </div>
+      </br>
+
+@include('layouts.footerp')
+@yield('content')    

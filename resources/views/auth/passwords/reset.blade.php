@@ -30,17 +30,57 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        body:before{
+            content: '';
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Encarnaci%C3%B3n%2C_Paraguay.jpg/500px-Encarnaci%C3%B3n%2C_Paraguay.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            -webkit-filter: blur(10px);
+            -moz-filter: blur(10px);
+            -o-filter: blur(10px);
+            -ms-filter: blur(10px);
+            filter: blur(10px);
+        }
+        .login-box
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 400px;
+            height: 400px;
+            padding: 30px 40px;
+            box-sizing: border-box;
+            background: rgba(0,0,0,.5);
+        }
+        .login-logo a {
+            
+            color: #000000;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    </style>
 
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="{{ url('/home') }}"><b>InfyOm </b>Generator</a>
+        <a href="{{ url('/home') }}"><b>GENERAR NUEVA CONTRASEÑA</b></a>
     </div>
 
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg">Reset your password</p>
+        <p class="login-box-msg">RESTABLECER</p>
 
         <form method="post" action="{{ url('/password/reset') }}">
             @csrf
@@ -48,7 +88,7 @@
             <input type="hidden" name="token" value="{{ $token }}">
 
             <div class="form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}">
-                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email">
+                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Correo Electronico">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 @if ($errors->has('email'))
                     <span class="help-block">
@@ -58,7 +98,7 @@
             </div>
 
             <div class="form-group has-feedback{{ $errors->has('password') ? ' has-error' : '' }}">
-                <input type="password" class="form-control" name="password" placeholder="Password">
+                <input type="password" class="form-control" name="password" placeholder="Contraseña">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
 
                 @if ($errors->has('password'))
@@ -69,7 +109,7 @@
             </div>
 
             <div class="form-group has-feedback{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                <input type="password" name="password_confirmation" class="form-control" placeholder="Confirm password">
+                <input type="password" name="password_confirmation" class="form-control" placeholder="Confirmar Contraseña">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
 
                 @if ($errors->has('password_confirmation'))
@@ -82,7 +122,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <button type="submit" class="btn btn-primary pull-right">
-                        <i class="fa fa-btn fa-refresh"></i>Reset Password
+                        <i class="fa fa-btn fa-refresh"></i> GENERAR
                     </button>
                 </div>
             </div>
