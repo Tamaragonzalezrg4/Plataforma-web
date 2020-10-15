@@ -34,16 +34,12 @@
             position: fixed;
             width: 100vw;
             height: 100vh;
-            background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Encarnaci%C3%B3n%2C_Paraguay.jpg/500px-Encarnaci%C3%B3n%2C_Paraguay.jpg);
+            background-image: url(https://upload.wikimedia.org/wikipedia/commons/3/3d/Puente_San_Roque_y_Costanera.jpg);
             background-position: center center;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
-            -webkit-filter: blur(10px);
-            -moz-filter: blur(10px);
-            -o-filter: blur(10px);
-            -ms-filter: blur(10px);
-            filter: blur(10px);
+          
         }
         .login-box
         {
@@ -51,11 +47,11 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
-            width: 400px;
+            width: 600px;
             height: 400px;
             padding: 30px 40px;
             box-sizing: border-box;
-            background: rgba(0,0,0,.5);
+            
         }
         .login-logo a {
             
@@ -68,12 +64,13 @@
 </head>
 <body class="hold-transition login-page" >
 <div class="login-box">
-    <div class="login-logo">
-        <a href="{{ url('/home') }}"><b>ADMINISTRACION</b></a>
-    </div>
+   
 
     <!-- /.login-logo -->
     <div class="login-box-body">
+         <div class="login-logo">
+        <a href="{{ url('/home') }}"><b>ADMINISTRACION</b></a>
+    </div>
         <p class="login-box-msg">INICIAR SESION</p>
 
         <form method="post" action="{{ url('/login') }}">

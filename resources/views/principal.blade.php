@@ -66,6 +66,9 @@
         <li class="nav-item">
           <a class="nav-link" href="{{ action('GraficoController@index') }}"><i class="fa fa-chart-pie"></i> <span class="clearfix d-none d-sm-inline-block">Graficos</span></a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ action('TestController@index') }}"><i class="fa fa-vial"></i> <span class="clearfix d-none d-sm-inline-block">Test</span></a>
+        </li>
       </ul>
     </nav>
     <!-- /.Navbar -->
@@ -150,10 +153,10 @@
       <!--Title-->
       <h4 class="card-title">Titulo: {{$n->titulo}}</h4>
       <!--Text-->
-      <p class="card-text">Descripcion: {{$n->descripcion}}.</p>
-      <p class="card-text">Fuente: {{$n->enlace_fuente}}.</p>
+      <p class="card-text">Descripcion: {{substr($n->descripcion,0,200)}}...</p>
+      <p class="card-text">Fuente: {{substr($n->enlace_fuente,0,50)}}...</p>
       <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-      <button type="button" class="btn btn-light-blue btn-md">{{$n->created_at}}</button>
+      <strong>Creado: {{$n->created_at}}</strong>
 
     </div>
 
@@ -177,9 +180,9 @@
     
               <h3 class="font-weight-bold">Titulo: {{$noticia->titulo}}</h3>
     
-              <p class="text-muted">Descripcion: {{$noticia->descripcion}}</p>
+              <p class="text-muted">Descripcion: {{substr($noticia->descripcion,0,200)}}...</p>
     
-              <a class="btn btn-purple btn-md ml-0" href="#" role="button">URL: {{$noticia->enlace_fuente}}<i class="fa fa-gem ml-2"></i></a>
+              <strong>URL: {{substr($noticia->enlace_fuente,0,50)}}...</strong>
     
             </div>
             <!--Grid column-->
@@ -194,6 +197,7 @@
                   <div class="mask rgba-white-light"></div>
                 </a>
               </div>
+              <a href="{{ url('detalles', [$noticia->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i>Ver mas</a>
     
             </div>
             <!--Grid column-->

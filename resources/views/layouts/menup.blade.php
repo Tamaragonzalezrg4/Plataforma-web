@@ -51,6 +51,9 @@
         <li class="nav-item">
           <a class="nav-link" href="{{ action('GraficoController@index') }}"><i class="fa fa-chart-pie"></i> <span class="clearfix d-none d-sm-inline-block">Graficos</span></a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ action('TestController@index') }}"><i class="fa fa-vial"></i> <span class="clearfix d-none d-sm-inline-block">Test</span></a>
+        </li>
       </ul>
     </nav>
     <!-- /.Navbar -->

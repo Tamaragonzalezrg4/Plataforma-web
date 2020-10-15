@@ -87,7 +87,7 @@
         <p>
           <i class="fas fa-phone mr-3"></i> (071) 203 076</p>
         <p>
-          <i class="fas fa-phone mr-3"></i> (071) 203 076</p>
+          <i class="fas fa-phone mr-3"></i> (071) 202 620</p>
       </div>
       <!-- Grid column -->
 

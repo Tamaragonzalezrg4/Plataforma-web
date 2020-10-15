@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateNoticiaRequest;
 use App\Repositories\NoticiaRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
+use App\Models\Noticia;
 use Flash;
 use Response;
 
@@ -153,4 +154,11 @@ class NoticiaController extends AppBaseController
 
         return redirect(route('noticias.index'));
     }
+
+    public function detalle ($datos){
+     $datos = Noticia::FindOrFail($datos);
+
+    return View('noticias.detalles', compact('datos'));
+
+        }
 }
