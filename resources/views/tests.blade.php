@@ -23,7 +23,7 @@ $('.stepper').mdbStepper();
       <h5 class="text-uppercase mb-0 py-1">
         <a class="white-text font-weight-bold" data-toggle="collapse" href="#collapse96" aria-expanded="true"
           aria-controls="collapse96">
-          I am the first title of accordion
+          TEST
         </a>
       </h5>
     </div>
@@ -32,12 +32,9 @@ $('.stepper').mdbStepper();
       <div class="card-body">
         <div class="row my-4">
           <div class="col-md-8">
-            <h2 class="font-weight-bold mb-3 black-text">Hi! I am the first one.</h2>
-            <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-              ullamco laboris</p>
-            <p class="mb-0">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur.</p>
+            <h2 class="font-weight-bold mb-3 black-text">Primer paso</h2>
+            <p class="">tuvo contacto con algun enfermo</p>
+            <p class="mb-0">formulario...</p>
           </div>
           <div class="col-md-4 mt-3 pt-2">
             <div class="view z-depth-1">
@@ -53,7 +50,7 @@ $('.stepper').mdbStepper();
       <h5 class="text-uppercase mb-0 py-1">
         <a class="collapsed font-weight-bold white-text" data-toggle="collapse" href="#collapse97"
           aria-expanded="false" aria-controls="collapse97">
-          I am the second title of accordion
+          TEST
         </a>
       </h5>
     </div>
@@ -62,12 +59,9 @@ $('.stepper').mdbStepper();
       <div class="card-body">
         <div class="row my-4">
           <div class="col-md-8">
-            <h2 class="font-weight-bold mb-3 black-text">Hi! I am the second one.</h2>
-            <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-              ullamco laboris</p>
-            <p class="mb-0">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur.</p>
+            <h2 class="font-weight-bold mb-3 black-text">Segundo paso</h2>
+            <p class="">tuvo contacto con algun enfermo</p>
+            <p class="mb-0">formulario...</p>
           </div>
           <div class="col-md-4 mt-3 pt-2">
             <div class="view z-depth-1">
@@ -83,7 +77,7 @@ $('.stepper').mdbStepper();
       <h5 class="text-uppercase mb-0 py-1">
         <a class="collapsed font-weight-bold white-text" data-toggle="collapse" href="#collapse98"
           aria-expanded="false" aria-controls="collapse98">
-          I am the third title of accordion
+          TEST
         </a>
       </h5>
     </div>
@@ -92,12 +86,9 @@ $('.stepper').mdbStepper();
       <div class="card-body">
         <div class="row my-4">
           <div class="col-md-8">
-            <h2 class="font-weight-bold mb-3 black-text">Hi! I am the third one.</h2>
-            <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-              ullamco laboris</p>
-            <p class="mb-0">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur.</p>
+            <h2 class="font-weight-bold mb-3 black-text">Primer paso</h2>
+            <p class="">tuvo contacto con algun enfermo</p>
+            <p class="mb-0">formulario...</p>
           </div>
           <div class="col-md-4 mt-3 pt-2">
             <div class="view z-depth-1">

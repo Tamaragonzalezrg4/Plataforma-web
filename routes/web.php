@@ -22,11 +22,14 @@ Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->middleware('verified');
 Route::get('principal', 'PrincipalController@noticias')->middleware('auth');
 Route::get('graficos', 'GraficoController@index')->middleware('auth');
-Route::get('mapas', 'MapaController@index')->middleware('auth');
+Route::get('mapas', 'MapaController@index');
 Route::get('tests', 'TestController@index')->middleware('auth');
 Route::get('detalles/{seoSlug}', ['as' => 'detalle', 'uses' => 'NoticiaController@detalle']);
 
+Route::get('apipacientes', 'ApiController@index');
+
 Route::resource('users', 'UserController');
 
+ 
 
 Route::resource('noticias', 'NoticiaController');

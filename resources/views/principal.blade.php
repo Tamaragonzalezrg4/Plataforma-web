@@ -27,54 +27,10 @@
 <link rel="icon" type="image/png" href="/icono.png" />
 	<title> Principal </title>
 </head>
-<body class="fixed-sn mdb-skin">
 
-  <!--Double navigation-->
-  <header>
-    <!-- Sidebar navigation -->
-    <div id="slide-out" class="side-nav fixed wide sn-bg-1">
-      <ul class="custom-scrollbar">
-        <!-- Logo -->
-        
-      </ul>
-      <div class="sidenav-bg rgba-blue-strong"></div>
-    </div>
     <!--/. Sidebar navigation -->
     <!-- Navbar -->
-    <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav">
-      <!-- SideNav slide-out button -->
-      <div class="float-left">
-        <a href="#" data-activates="slide-out" class="button-collapse"><i class="fas fa-bars"></i></a>
-      </div>
-      <!-- Breadcrumb-->
-      <div class="breadcrumb-dn mr-auto">
-        
-      </div>
-      <ul class="nav navbar-nav nav-flex-icons ml-auto">
-        <li class="nav-item">
-          <a class="nav-link"><i class="fas fa-envelope"></i> <span class="clearfix d-none d-sm-inline-block">Contactar</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"href="{{ action('PrincipalController@noticias') }}"><i class="fa fa-home"></i> <span class="clearfix d-none d-sm-inline-block">Inicio</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"><i class="fas fa-user"></i> <span class="clearfix d-none d-sm-inline-block">Iniciar Secion</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ action('MapaController@index') }}"><i class="fas fa-map-marked-alt"></i> <span class="clearfix d-none d-sm-inline-block">Mapas</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ action('GraficoController@index') }}"><i class="fa fa-chart-pie"></i> <span class="clearfix d-none d-sm-inline-block">Graficos</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ action('TestController@index') }}"><i class="fa fa-vial"></i> <span class="clearfix d-none d-sm-inline-block">Test</span></a>
-        </li>
-      </ul>
-    </nav>
-    <!-- /.Navbar -->
-  </header>
-</body>
-</nav>
+@include('layouts.menup')
 
 
 <!--Carousel Wrapper-->
@@ -125,10 +81,10 @@
 </div>
 <!-- Card -->
 <div class="container">
-  <center>
-<h4 class="card-title"><strong> ULTIMAS NOTICIAS
-</strong></h4></center>
-
+    <center><img src="/un.png" alt="Avatar" ></center>
+</div>
+<br>
+<div class="container">
 @foreach($ultimas->chunk(3) as $ultimas)
 <!-- Card deck -->
 <div class="card-deck">
@@ -141,7 +97,7 @@
 
     <!--Card image-->
     <div class="view overlay">
-       <img  src="{{$n->imagen}}"  style="width:400px" class="img-responsive" alt="" >
+       <img  src="{{$n->imagen}}" class="img-responsive" height="300px" width="350px" alt="" >
       <a href="#!">
         <div class="mask rgba-white-slight"></div>
       </a>
@@ -151,10 +107,10 @@
     <div class="card-body">
 
       <!--Title-->
-      <h4 class="card-title">Titulo: {{$n->titulo}}</h4>
+      <h4 class="card-title">{{substr($n->titulo,0,50)}}...</h4>
       <!--Text-->
-      <p class="card-text">Descripcion: {{substr($n->descripcion,0,200)}}...</p>
-      <p class="card-text">Fuente: {{substr($n->enlace_fuente,0,50)}}...</p>
+      <p class="card-text">{{substr($n->descripcion,0,200)}}...</p>
+      <p class="card-text"><u>Fuente:</u> {{substr($n->enlace_fuente,0,50)}}...</p>
       <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
       <strong>Creado: {{$n->created_at}}</strong>
 
@@ -178,11 +134,11 @@
             <!--Grid column-->
             <div class="col-md-6 mb-4 mb-md-0">
     
-              <h3 class="font-weight-bold">Titulo: {{$noticia->titulo}}</h3>
+              <h3 class="font-weight-bold">{{$noticia->titulo}}</h3>
     
-              <p class="text-muted">Descripcion: {{substr($noticia->descripcion,0,200)}}...</p>
+              <p class="text-muted">{{substr($noticia->descripcion,0,200)}}...</p>
     
-              <strong>URL: {{substr($noticia->enlace_fuente,0,50)}}...</strong>
+              <strong><u>URL:</u>  {{substr($noticia->enlace_fuente,0,50)}}...</strong>
     
             </div>
             <!--Grid column-->
@@ -192,12 +148,12 @@
     
               <!--Image-->
               <div class="view overlay z-depth-1-half">
-                <img  src="{{$noticia->imagen}}"  style="width:500px " class="img-responsive" alt="">
+                <img  src="{{$noticia->imagen}}" class="img-responsive" height="350px" width="435px"  alt="">
                 <a href="#">
                   <div class="mask rgba-white-light"></div>
                 </a>
               </div>
-              <a href="{{ url('detalles', [$noticia->id]) }}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i>Ver mas</a>
+              <a href="{{ url('detalles', [$noticia->id]) }}" class='btn btn-success btn-xs'><i class="glyphicon glyphicon-eye-open"></i>Ver mas</a>
     
             </div>
             <!--Grid column-->
@@ -217,167 +173,41 @@
       </div>
 <!-- Card deck -->
 
-<center>
-<h4 class="card-title"><strong> proximamente
-</strong></h4></center>
-<!--Carousel Wrapper-->
-<div id="carousel-thumb" class="carousel slide carousel-fade carousel-thumbnails" data-ride="carousel">
-  <!--Slides-->
-  <div class="carousel-inner" role="listbox">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(88).jpg"
-        alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(121).jpg"
-        alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(31).jpg"
-        alt="Third slide">
-    </div>
-  </div>
-  <!--/.Slides-->
-  <!--Controls-->
-  <a class="carousel-control-prev" href="#carousel-thumb" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carousel-thumb" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  <!--/.Controls-->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-thumb" data-slide-to="0" class="active">
-      <img src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(88).jpg" width="100">
-    </li>
-    <li data-target="#carousel-thumb" data-slide-to="1">
-      <img src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg" width="100">
-    </li>
-    <li data-target="#carousel-thumb" data-slide-to="2">
-      <img src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(31).jpg" width="100">
-    </li>
-  </ol>
+<div class="container">
+
+    <h3 class="display-4"> <center><i class="fa fa-newspaper"></i> Noticias mas relevantes </center></h3>
+
 </div>
-<!--/.Carousel Wrapper-->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    </ol>
+    <div class="carousel-inner">
+        @foreach($relevante as $key => $re)
+        <div class="carousel-item {{$key == 0 ? 'active' : '' }}">
+            <img src="{{$re->imagen}}"  class="d-block w-100 " height="500px" width="450px" alt="..."> 
+        </div>
+        @endforeach
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button"  data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true">     </span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
 </div>
 <body>
 
 </body>
-<div class="container"> 
+
   
-
-<!-- Footer -->
-<footer class="page-footer font-small mdb-color pt-4">
-
-  <!-- Footer Links -->
-  <div class="container text-center text-md-left">
-
-    <!-- Footer links -->
-    <div class="row text-center text-md-left mt-3 pb-3">
-
-      <!-- Grid column -->
-      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-        <h6 class="text-uppercase mb-4 font-weight-bold">Company name</h6>
-        <p>Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-          consectetur
-          adipisicing elit.</p>
-      </div>
-      <!-- Grid column -->
-
-      <hr class="w-100 clearfix d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-        <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
-        <p>
-          <a href="#!">MDBootstrap</a>
-        </p>
-        <p>
-          <a href="#!">MDWordPress</a>
-        </p>
-        <p>
-          <a href="#!">BrandFlow</a>
-        </p>
-        <p>
-          <a href="#!">Bootstrap Angular</a>
-        </p>
-      </div>
-      <!-- Grid column -->
-
-      <hr class="w-100 clearfix d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-        <h6 class="text-uppercase mb-4 font-weight-bold">Useful links</h6>
-        <p>
-          <a href="#!">Your Account</a>
-        </p>
-        <p>
-          <a href="#!">Become an Affiliate</a>
-        </p>
-        <p>
-          <a href="#!">Shipping Rates</a>
-        </p>
-        <p>
-          <a href="#!">Help</a>
-        </p>
-      </div>
-
-      <!-- Grid column -->
-      <hr class="w-100 clearfix d-md-none">
-
-      <!-- Grid column -->
-      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-        <h6 class="text-uppercase mb-4 font-weight-bold">Contacto</h6>
-        <p>
-          <i class="fas fa-home mr-3"></i> Encarnacion</p>
-        <p>
-          <i class="fas fa-envelope mr-3"></i> 7masecretariageneral@gmail.com</p>
-        <p>
-          <i class="fas fa-phone mr-3"></i> (071) 203 076</p>
-        <p>
-          <i class="fas fa-phone mr-3"></i> (071) 202 620</p>
-      </div>
-      <!-- Grid column -->
-
-    </div>
-    <!-- Footer links -->
-
-    <hr>
-
-    <!-- Grid row -->
-    <div class="row d-flex align-items-center">
-
-      <!-- Grid column -->
-      <div class="col-md-7 col-lg-8">
-
-        <!-- Call to action -->
-  <ul class="list-unstyled list-inline text-center py-2">
-    <li class="list-inline-item">
-      <h5 class="mb-1">Registrate gratis</h5>
-    </li>
-    <li class="list-inline-item">
-      <a href="#!" class="btn btn-danger btn-rounded">Registrate aqui</a>
-    </li>
-  
-      </div>
-        
-
-      </div>
-      <!-- Grid column -->
-
-
-      <!-- Grid column -->
-
-    </div>
-    <!-- Grid row -->
-
-  </div>
-  <!-- Footer Links -->
-
-</footer>
-<!-- Footer -->
 </div>
+</section>
+</div>
+
+<!-- Footer -->
+@include('layouts.footerp')
+
 </html>

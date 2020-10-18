@@ -50,21 +50,23 @@
     <div class="card-body">
 
       <!--Title-->
-      <center><h4 class="card-title">Titulo: {{$datos->titulo}}</h4></center>
+      <center><h4 class="card-title">{{$datos->titulo}}</h4></center>
       <!--Text-->
-      <p class="card-text">Descripcion: {{$datos->descripcion}}.</p>
-      <p class="card-text">Fuente: {{$datos->enlace_fuente}}.</p>
+      <p class="card-text">{{$datos->descripcion}}.</p>
+      <p class="card-text"><u>Fuente:</u> {{$datos->enlace_fuente}}.</p>
       <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-      <strong>Creado:{{$datos->created_at}}</strong><br>
-      <strong>Actualizado:{{$datos->updated_at}}</strong>
+      <strong><u>Creado:</u> {{$datos->created_at}}</strong><br>
+      <strong><u>Actualizado:</u> {{$datos->updated_at}}</strong>
 
+<br>
+      <a href="{{ action('PrincipalController@noticias') }}" class='btn btn-primary btn-xs'><i class="glyphicon glyphicon-eye-open"></i>Volver</a>
     </div>
 
   </div>
 </div>  
   <!-- Card -->
 </div>
- <a href="{{ action('PrincipalController@noticias') }}" class='btn btn-primary btn-xs'><i class="glyphicon glyphicon-eye-open"></i>Volver</a>
+ 
 </div>
 
 @include('layouts.footerp')
