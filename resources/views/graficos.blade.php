@@ -234,9 +234,52 @@ $('#polar').click(function () {
     });
 });
             </script>
+            <div class="table-responsive">
+    <table class="table" id="tablas-table">
+        <thead>
+            <tr>
+                <th>Femenino</th>
+                <th>Masculino</th>
+                <th>Ambos</th>
+                <th>Otro</th>
+                <br>
+                <th>Encarnacion</th>
+                <th>Cambyreta</th>
+                <th>Coronel Bogado</th>
+                <th>Capitan Mirando</th>
+                <th>Positivo</th>
+                <th>Negativo</th>
+                <th>Recuperado</th>
+                <th>Fallecido</th>
+                <th>Inconcluso</th>
+            </tr>
+        </thead>
+        <tbody>
+        @foreach($table as $tabla)
+            <tr>
+                <td>{{ $tabla->femenino }}</td>
+                <td>{{ $tabla->masculino }}</td>
+                <td>{{ $tabla->ambos }}</td>
+                <td>{{ $tabla->otro }}</td><br>
+                <td>{{ $tabla->encarnacion }}</td>
+                <td>{{ $tabla->cambyreta }}</td>
+                <td>{{ $tabla->coronel_bogado }}</td>
+                <td>{{ $tabla->capitan_mirando }}</td>
+                <td>{{ $tabla->positivo }}</td>
+                <td>{{ $tabla->negativo }}</td>
+                <td>{{ $tabla->recuperado }}</td>
+                <td>{{ $tabla->fallecido }}</td>
+                <td>{{ $tabla->inconcluso }}</td>
+            </tr>
+        @endforeach
+        </tbody>
+    </table>
+</div>
               
           </div>
       </br>
+
+
 
 @include('layouts.footerp')
 @yield('content')    

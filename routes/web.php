@@ -33,3 +33,5 @@ Route::resource('users', 'UserController');
  
 
 Route::resource('noticias', 'NoticiaController');
+
+Route::resource('tablas', 'TablaController');

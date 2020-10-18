@@ -15,3 +15,7 @@
 </li>
 
 
+<li class="{{ Request::is('tablas*') ? 'active' : '' }}">
+    <a href="{{ route('tablas.index') }}"><i class="fa fa-edit"></i><span>Tablas</span></a>
+</li>
+
